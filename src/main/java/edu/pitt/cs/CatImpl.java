@@ -2,10 +2,10 @@ package edu.pitt.cs;
 
 public class CatImpl implements Cat {
 
-
 	boolean _rented;
 	int id;
-	String name; 
+	String name;
+
 	public CatImpl(int id, String name) {
 		this.id = id;
 		this.name = name;

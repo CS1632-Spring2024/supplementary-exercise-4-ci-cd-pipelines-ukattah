@@ -27,10 +27,14 @@ public class CatUnitTest {
 	public void setUp() throws Exception {
 		// INITIALIZE THE TEST FIXTURE
 		c = Cat.createInstance(InstanceType.IMPL, 1, "Jennyanydots");
-		// Create a Cat with ID 1 and name "Jennyanydots", assign to c using a call to Cat.createInstance(InstanceType, int, String).
-		// Passing InstanceType.IMPL as the first parameter will create a real cat using your CatImpl implementation.
-		// Passing InstanceType.MOCK as the first parameter will create a mock cat using Mockito.
-		// Which type is the correct choice for this unit test?  I'll leave it up to you.  The answer is in the Unit Testing Part 2 lecture. :)
+		// Create a Cat with ID 1 and name "Jennyanydots", assign to c using a call to
+		// Cat.createInstance(InstanceType, int, String).
+		// Passing InstanceType.IMPL as the first parameter will create a real cat using
+		// your CatImpl implementation.
+		// Passing InstanceType.MOCK as the first parameter will create a mock cat using
+		// Mockito.
+		// Which type is the correct choice for this unit test? I'll leave it up to you.
+		// The answer is in the Unit Testing Part 2 lecture. :)
 		// TODO: Fill in
 	}
 
@@ -53,7 +57,7 @@ public class CatUnitTest {
 	@Test
 	public void testGetId() {
 		c.getId();
-		assertEquals(c.getId(),1);
+		assertEquals(c.getId(), 1);
 	}
 
 	/**
@@ -82,7 +86,7 @@ public class CatUnitTest {
 	 */
 	@Test
 	public void testGetRented() {
-		
+
 		assertFalse(c.getRented());
 	}
 

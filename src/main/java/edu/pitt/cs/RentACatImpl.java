@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RentACatImpl implements RentACat {
-	//boolean rented;
+	// boolean rented;
 	private ArrayList<Cat> cats = new ArrayList<Cat>();
 
 	/**
@@ -24,8 +24,7 @@ public class RentACatImpl implements RentACat {
 			cat.returnCat();
 			System.out.println("Welcome back, " + cat.getName() + "!");
 			return true;
-		}
-		else{
+		} else {
 			if (cat != null) {
 				System.out.println(cat.getName() + " is already here!");
 			}
@@ -50,15 +49,13 @@ public class RentACatImpl implements RentACat {
 			c.rentCat();
 			System.out.print(c.getName() + " has been rented.\n");
 			return true;
-		}
-		else {
+		} else {
 			if (c != null) {
 				System.out.print("Sorry, " + c.getName() + " is not here!\n");
 			}
 			return false;
 		}
-		
-		
+
 	}
 
 	/**
@@ -74,12 +71,11 @@ public class RentACatImpl implements RentACat {
 		Cat c = getCat(id);
 		if (c == null) {
 			return false;
-		}
-		else {
+		} else {
 			c.renameCat(name);
 			return true;
 		}
-		
+
 	}
 
 	/**
@@ -94,15 +90,17 @@ public class RentACatImpl implements RentACat {
 
 	public String listCats() {
 		String catString = "";
+
 		for (Cat c : cats) {
 			// If we found a cat whose id matches the id
 			// of the argument, then we have a match and
 			// can thus return a reference to that cat
 			if (!c.getRented()) {
-			catString += c.toString();
-			catString += "\n";
+				catString += c.toString();
+				catString += "\n";
 			}
 		}
+
 		return catString;
 	}
 
